@@ -1,0 +1,25 @@
+import java.util.*;
+import java.util.Scanner;
+class squaredollar
+{
+public static void main(String[] args)
+{
+Scanner input=new Scanner(System.in);
+System.out.print("enter the no of rows: ");
+int n=input.nextInt();
+int i,j;
+for(i=1;i<=n;i++)
+{
+for(j=1;j<=n;j++)
+{
+if(i==1||i==n||j==1||j==n)
+{
+ System.out.print("$");
+}
+else
+System.out.print(" ");
+}
+System.out.println();
+}
+}
+}

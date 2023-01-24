@@ -1,0 +1,33 @@
+import java.util.*;
+import java.util.Scanner;
+class intrest
+{
+public static void main(String[] args)
+{
+     try
+     {
+            Scanner input = new Scanner(System.in);
+            System.out.println("Enter the principle amount:");
+            int pri=input.nextInt();
+            System.out.println("Enter the number of years:");
+            int year=input.nextInt();
+            System.out.println("Is senior citizen y/n:");
+            char age=input.next().charAt(0);
+            double intrest=0.0;
+            if(age=='y')
+            {
+                  intrest=(pri*year*0.12)/100;
+                  System.out.print(intrest);
+            }
+            else
+            {
+                  intrest=(pri*year*0.1);
+                  System.out.print(intrest);
+            }
+     }
+     catch(Exception e)
+     {
+          System.out.print(" enter valid");
+     }
+}
+}        

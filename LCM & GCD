@@ -18,7 +18,7 @@ public static void main(String[] args)
  }
  count++;
  }
- int lcm = (num1*num2);
+ int lcm = (num1*num2)/gcd;
  System.out.println("the GCD is:- "+gcd);
  System.out.println("the LCM is:- "+lcm);
  }

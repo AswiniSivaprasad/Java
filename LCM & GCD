@@ -1,47 +1,25 @@
 import java.util.*;
-import java.util.Scanner;
-public class lcmgcd
+class lcmgcd {
+public static void main(String[] args) 
 {
- static int gcd(int a,int b)
- {
- if(a==0)
- return b;
- return gcd(b%a,a);
+ Scanner input = new Scanner(System.in);
+ System.out.print("enter N value:-");
+ int n = input.nextInt();
+
+ System.out.print("Number 1:- ");
+ int num1 = input.nextInt();
+ System.out.print("Number 2:- ");
+ int num2 = input.nextInt();
+ int small = (num1<num2)?num1:num2;
+ int count = 1,gcd=0;
+ while(count<=small){
+ if(num1%count==0 && num2%count==0){
+ gcd = count;
  }
- static int findgcd(int a[], int n)
- {
- int res=a[0];
- for(int i=0;i<n;i++)
- {
- res=gcd(res,a[i]);
- if(res==1)
- return 1;
+ count++;
  }
- return res;
- }
- public static void main(String[] args)
- {
- Scanner input=new Scanner(System.in);
- System.out.println("Enter the value of N:");
- int n=input.nextInt();
- int a[]=new int[n];
- for(int i=0;i<n;i++)
- {
- System.out.println("Enter the number:");
- a[i]=input.nextInt();
- }
- System.out.println("GCD is:");
- System.out.println(findgcd(a,n));
- int gcd=findgcd(a,n);
- int mul=1;
- for(int i=0;i<n;i++)
- {
- mul=mul*a[i];
- }
- System.out.println("LCM is:");
- int lcm=mul/gcd;
- System.out.println(lcm);
+ int lcm = (num1*num2);
+ System.out.println("the GCD is:- "+gcd);
+ System.out.println("the LCM is:- "+lcm);
  }
 }
-
-

@@ -1,0 +1,19 @@
+import java.util.*;
+import java.util.scanner;
+class skippingk
+{
+public static void main(String[] args) {
+Scanner obj=new Scanner(System.in);
+System.out.print("M=");
+int m=obj.nextInt();
+System.out.print("N=");
+int n=obj.nextInt();
+System.out.print("K=");
+int k=obj.nextInt();
+while(m<=n)
+{
+ System.out.println(m);
+ m=m+k+1;
+}
+}
+}

@@ -1,0 +1,46 @@
+import java.util.*;
+import java.util.Scanner;
+class matrixmul {
+public static void main(String[] args)
+{
+try
+{
+Scanner input=new Scanner(System.in);
+System.out.print("Enter no.of rows:"); 
+int r=input.nextInt(); 
+System.out.print("Enter no.of columns:");
+int c=input.nextInt(); 
+System.out.println("enter matrix 1");
+int mat1[][]=new int[r][c];
+int mat2[][]=new int[r][c]; 
+ for(int i=0;i<r;i++) 
+ {     
+ for(int j=0;j<c;j++)     
+ {      
+ mat1[i][j]=input.nextInt();     
+ } }
+ System.out.println("enter matrix 2");  
+ for(int i=0;i<r;i++) {     
+ for(int j=0;j<c;j++)     
+ {   
+ mat2[i][j]=input.nextInt();     
+ } }
+ System.out.println("Multiplied matrix");  
+ int sum[][]=new int[r][c]; 
+ for(int i=0;i<r;i++) {     
+ for(int j=0;j<c;j++) {         
+ sum[i][j]=0;          
+ for(int k=0;k<c;k++) 
+ {             
+ sum[i][j] = sum[i][j] +(mat1[i][k]*mat2[k][j]);         
+ }         
+ System.out.print(sum[i][j] + "\t");    
+ }     
+ System.out.println(); 
+ }
+}
+catch(Exception e)
+{ 
+System.out.println(" enter valid");
+}
+}}

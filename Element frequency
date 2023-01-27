@@ -1,0 +1,32 @@
+import java.util.Arrays; 
+import java.util.Scanner; 
+public class elementfreq
+{ 
+public static void main(String[] args) 
+{ 
+Scanner input=new Scanner(System.in); 
+int a[]=new int[] {1,2,8,3,2,2,2,5,1}; 
+int t[]=new int[a.length]; 
+System.out.println("element |  frequency");
+int visited=-1; 
+for(int i=0;i<a.length;i++) 
+{ 
+int count=1; 
+for(int j=i+1;j<a.length;j++) 
+{ 
+if(a[i]==a[j]) 
+{ 
+count++; 
+t[j]=visited; 
+} 
+} 
+if(t[i]!=visited) 
+t[i]=count; 
+} 
+for(int i=0;i<a.length;i++) 
+{ 
+if(t[i]!=visited) 
+System.out.println(a[i]+"       |      "+t[i]);
+} 
+} 
+}

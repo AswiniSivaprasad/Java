@@ -23,12 +23,12 @@ for(int i=0;i<len;i++)
  c++;
  }
 }
-System.out.print("Consonants: ");
+System.out.print("Vowels: ");
 for(int i=0;i<v;i++)
 {
  System.out.print(vow[i]);
 }
-System.out.print("\nvowels: ");
+System.out.print("\nConsonants: ");
 for(int j=0;j<c;j++)
 {
  System.out.print(con[j]);

@@ -5,17 +5,23 @@ public class mmm
 public static void main(String[] args)
 {
 Scanner input=new Scanner(System.in);
-int a[]={16,18,27,16,23,21,19};
-int len=a.length;
+System.out.print("Enter Size of array: ");
+int n=input.nextInt();
+int[] a=new int[20];
+System.out.print("Enter elements of array: ");
+for(int i=0;i<n;i++)
+{
+a[i]=input.nextInt();
+}
 int sum=0;
-for(int i=0;i<len;i++)
+for(int i=0;i<n;i++)
 {
  sum=sum+a[i]; }
-int mean=sum/len;
+int mean=sum/n;
 System.out.println("mean: "+mean);
-for(int i=0;i<len;i++)
+for(int i=0;i<n;i++)
 {
- for(int j=i+1;j<len;j++)
+ for(int j=i+1;j<n;j++)
  {
  if(a[i]>a[j])
  {
@@ -24,23 +30,23 @@ for(int i=0;i<len;i++)
  a[j]=temp;
  }
  } }
-for(int i=0;i<len;i++)
+for(int i=0;i<n;i++)
 {
- if(len%2==0)
+ if(n%2==0)
  {
- int mid=len/2;
+ int mid=n/2;
  System.out.print("median: "+a[mid-1]);
  break;
  }
  else
  {
- int mid=(len+1)/2;
+ int mid=(n+1)/2;
  System.out.println("median: "+a[mid-1]);
  break;
  } }
-for(int i=0;i<len;i++)
+for(int i=0;i<n;i++)
 {
- for(int j=i+1;j<len;j++)
+ for(int j=i+1;j<n;j++)
  {
  if(a[i]==a[j])
  {

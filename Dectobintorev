@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class dectobintodec
+{
+	public static void main(String[] args)
+	{
+		Scanner input=new Scanner(System.in);
+		System.out.print("Enter the decimal: ");
+		int n=input.nextInt();
+		int num=Integer.parseInt(Integer.toBinaryString(n));
+		int rev=0;
+		while(num!=0)
+		{
+			int r=num%10;
+			rev=rev*10+r;
+			num=num/10;
+		}
+		String rnum=Integer.toString(rev);
+		int i=Integer.parseInt(rnum,2);
+		System.out.print("Reverse of binary: "+i);
+	}
+}

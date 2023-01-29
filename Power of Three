@@ -12,6 +12,7 @@ class threepower {
     return n==1;
   }
   public static void main(String[] args){
+  try {
   Scanner input=new Scanner(System.in);
   System.out.print("Enter the number: ");
   int n=input.nextInt();
@@ -19,5 +20,9 @@ class threepower {
       System.out.println("True");
     else
       System.out.println("False");
-  }
+ }
+catch(Exception e)
+{
+System.out.println(" enter valid");
 }
+}}

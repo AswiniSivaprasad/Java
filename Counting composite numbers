@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class countcomposite {
+public static void main(String[] args)
+{
+Scanner input=new Scanner(System.in);
+System.out.print("Enter Size of array: ");
+int n=input.nextInt();
+int[] arr=new int[100];
+System.out.print("Enter array elements: ");
+for(int i=0;i<n;i++)
+{
+arr[i]=input.nextInt();
+}
+int count=0;
+for(int i=0;i<n;i++)
+{
+ int c=0;
+ for(int j=1;j<100;j++)
+ {
+ if(arr[i]%j==0)
+ {
+ c++;
+ }
+ }
+ if(c>2)
+ count++;
+}
+System.out.println("The composite numbers are: "+count);
+}}

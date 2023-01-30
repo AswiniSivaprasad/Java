@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class cs 
+{
+   	int num;
+   	int flt;
+   	cs(int num,int  flt)
+	{
+      		this.num = num;
+      		this.flt = flt;
+   	}
+	public static void main(String args[])
+	{
+      		Scanner sc = new Scanner(System.in);
+      		System.out.print("Enter integer : ");
+		if(!sc.hasNextInt())
+		{
+			System.out.print("Invalid");
+			return;
+		}
+      		int num = sc.nextInt();
+      		System.out.print("Enter integer: ");
+		if(!sc.hasNextInt())
+		{
+			System.out.print("Invalid");
+			return;
+		}
+      		int flt = sc.nextInt();      
+      		cs obj = new cs(num, flt);
+      		System.out.print(obj.num);
+      		System.out.println(obj.flt);
+   }
+}

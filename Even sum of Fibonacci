@@ -1,32 +1,19 @@
-import java.util.*;
 import java.util.Scanner;
+import java.io.*;
 class evensumfibbo {
-public static void main(String[] args)
-{
-      try
-      {
-              Scanner input=new Scanner(System.in);
-              System.out.print("Enter the n value:");
-              int n=input.nextInt(); 
-              int a1=0,a2=1,a3; 
-              int a[]=new int[50]; 
-              for(int i=0;i<n;i++) {     
-              a[i]=a1;     
-              System.out.print(a[i]+" ");     
-              a3=a1+a2;     
-              a1=a2;     
-              a2=a3; 
-              } 
-              int sum=0; 
-              for(int i=0;i<=n*2;i=i+2) 
-              {     
-              sum=sum+a[i]; 
-              } 
-              System.out.println("\nSum: "+sum);
-      }
-      catch(Exception e)
-      {
-      System.out.println(" enter valid");
-      }
-}}
- 
+ public static void main(String[] args){
+ int my_input, i, sum;
+ Scanner my_scanner = new Scanner(System.in);
+ System.out.print("Enter N: ");
+ my_input = my_scanner.nextInt();
+ int fabonacci[] = new int[2 * my_input + 1];
+ fabonacci[0] = 0;
+ fabonacci[1] = 1;
+ sum = 0;
+ for (i = 2; i <= 2 * my_input; i++) {
+ fabonacci[i] = fabonacci[i - 1] + fabonacci[i - 2];
+ if (i % 2 == 0)
+ sum += fabonacci[i];
+ }
+ System.out.printf("Even sum of fibonacci series till number %d is %d" , my_input, sum);
+ } }

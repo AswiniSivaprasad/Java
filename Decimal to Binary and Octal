@@ -1,0 +1,29 @@
+import java.util.*;
+import java.util.Scanner;
+class Convert 
+{ 
+ int num;
+ void getVal()
+ {
+   System.out.println("Decimal to Hexadecimal,Octal and Binary");
+   Scanner input=new Scanner(System.in);
+   System.out.print("Enter the number:");
+   num=Integer.parseInt(input.nextLine());
+ }
+ void convert()
+  {
+     String binary=Integer.toBinaryString(num);
+     System.out.println("Binary Value is:"+binary);
+     String octal=Integer.toOctalString(num);
+     System.out.println("Octal Value is:"+octal);
+  }
+  }
+  class decimalconvert
+  {
+   public static void main(String args[])
+   {
+     Convert obj=new Convert();
+     obj.getVal();
+     obj.convert();
+  }
+} 
